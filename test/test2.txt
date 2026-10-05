@@ -1,0 +1,104 @@
+a
+42
+nil
+()
+
+(quote a)
+(quote 42)
+(quote nil)
+(quote ())
+(quote (a b c))
+(quote (quote a))
+(quote (car (quote (a b))))
+
+'a
+'42
+'nil
+'()
+'(a b c)
+'(quote a)
+''a
+'''a
+'(car x)
+' (a b)
+'(())
+'((a b) (c d))
+'(a(b c)d)
+
+(car (quote (a b c)))
+(cdr (quote (a b c)))
+(car '(a b c))
+(cdr '(a b c))
+(car (quote ((a b) c d)))
+(cdr (quote ((a b) c d)))
+(car (cdr (quote (a b c))))
+(cdr (cdr (quote (a b c))))
+(cdr (cdr (cdr (quote (a b c)))))
+(car (quote (a)))
+(cdr (quote (a)))
+(car '(car cdr cons quote eval))
+(cdr (car '((a b c) d e)))
+
+(cons a ())
+(cons a (cons b ()))
+(cons a (cons b (cons c ())))
+(cons () ())
+(cons 'a ())
+(cons 'a '())
+(cons 'a (cons 'b ()))
+(cons 'a (cons 'b (cons 'c ())))
+(cons 'a '(b c))
+(cons '(a b) '(c d))
+(cons '(a b) ())
+(cons () '(b))
+(cons 'a (cons () '(b)))
+
+(cons a b)
+(cons (quote a) (quote b))
+(cons 'a 'b)
+(cons 'a (cons 'b 'c))
+(cons (cons 'a 'b) ())
+(cons (cons 'a 'b) 'c)
+(cons () 'a)
+
+(car (cons 'a 'b))
+(cdr (cons 'a 'b))
+(car (cons 'a '(b c)))
+(cdr (cons 'a '(b c)))
+(cons (car '(a b)) (cdr '(a b)))
+(cons (car (cdr '(a b))) (cons (car '(a b)) ()))
+(cons 'x (cdr '(a b c)))
+
+(eval (quote a))
+(eval (quote (quote a)))
+(eval (quote (quote (quote a))))
+(eval 'a)
+(eval ''a)
+(eval '''a)
+(eval (car (quote (a b c))))
+(eval (cdr (quote (a b c))))
+(eval '(car (quote (a b c))))
+(eval '(cdr (quote (a b c))))
+(eval '(car '(a b c)))
+(eval (car (quote ((quote (a b c))))))
+(eval '(cons 'a '(b c)))
+(eval '(cons 'a 'b))
+(eval ''(a b c))
+(eval (quote (quote (a b c))))
+
+(car
+(quote
+(a b c)))
+
+'(
+a
+b
+c)
+
+(cons
+'a
+(cons 'b ()))
+
+(quote a) (quote (b c))
+'a 'b '(c d)
+() 'a (quote b)

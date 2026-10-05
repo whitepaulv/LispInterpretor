@@ -1,0 +1,91 @@
+a
+42
+nil
+()
+a
+42
+nil
+()
+(a b c)
+(quote a)
+(car (quote (a b)))
+a
+42
+nil
+()
+(a b c)
+(quote a)
+(quote a)
+(quote (quote a))
+(car x)
+(a b)
+(())
+((a b) (c d))
+(a (b c) d)
+a
+(b c)
+a
+(b c)
+(a b)
+(c d)
+b
+(c)
+()
+a
+()
+car
+(b c)
+(a)
+(a b)
+(a b c)
+(())
+(a)
+(a)
+(a b)
+(a b c)
+(a b c)
+((a b) c d)
+((a b))
+(() b)
+(a () b)
+(a . b)
+(a . b)
+(a . b)
+(a b . c)
+((a . b))
+((a . b) . c)
+(() . a)
+a
+b
+a
+(b c)
+(a b)
+(b a)
+(x b c)
+a
+a
+(quote a)
+a
+a
+(quote a)
+a
+(b c)
+a
+(b c)
+a
+(a b c)
+(a b c)
+(a . b)
+(a b c)
+(a b c)
+a
+(a b c)
+(a b)
+a
+(b c)
+a
+b
+(c d)
+()
+a
+b

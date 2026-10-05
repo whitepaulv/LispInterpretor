@@ -15,10 +15,10 @@ public class fileChecker {
 
     public static void main(String[] args) throws IOException {
         // Put number here:
-        Integer testNumber = 1;  // FIXME: EDIT HERE
+        Integer testNumber = 2;  // FIXME: EDIT HERE
     
-        String fOneName = "testOutput" + testNumber.toString() + ".txt";
-        String fTwoName = "testResults" + testNumber.toString() + ".txt";
+        String fOneName = "testOutput/testOutput" + testNumber.toString() + ".txt";
+        String fTwoName = "testResults/testResults" + testNumber.toString() + ".txt";
     
         File fOne = new File(fOneName);
         File fTwo = new File(fTwoName);
