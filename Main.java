@@ -163,8 +163,7 @@ public class Main {
                     Node arg1 = evalAtom(n.cdr.car); 
                     Node arg2 = evalAtom(n.cdr.cdr.car); 
                     if (arg1 == null || arg2 == null) return nil();
-                    if (arg1.isNil && arg2.isNil) return t(); // If both nil, they are equal
-                    if (arg1.isNil || arg2.isNil) return nil();
+                    if (arg1.isNil || arg2.isNil) return nil(); // Even if both are nil, you still return nil
 
                     if ((arg1 != null && arg2 != null) && (arg1.val != null && arg2.val != null) && arg1.val.equals(arg2.val))
                         return t();
@@ -181,8 +180,8 @@ public class Main {
 
                 }
                 case "cond": {
-                    Node clause = n.cdr; // Used to have n.cdr.car, but that did not work as intended. Started 1 layer too deep
-                    
+                    Node clause = n.cdr.car; // Used to have n.cdr.car, but that did not work as intended. Started 1 layer too deep
+                                         // No, actually n.cdr.car was correct. 
                     while (clause != null && !clause.isNil) {
                         Node testExpr = clause.car;
                         clause = clause.cdr;
