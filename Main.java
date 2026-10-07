@@ -376,7 +376,7 @@ public class Main {
 
             if (peekChar == -1) return null; 
             
-            if (peekChar == '(' || peekChar == ')') {
+            if (peekChar == '(' || peekChar == ')' || peekChar == '\'') {
                 nextToken = String.valueOf((char) peekChar);
                 advanceChar();
             } else {
@@ -415,6 +415,28 @@ public class Main {
 
         if (token.equals(")")) {
             throw new RuntimeException("Syntax Error: Unexpected closing parenthesis ')'"); // Prevent issues from extra ) in expressions
+        }
+
+        if (token.equals("'")) {
+            getToken(); // clear out the '
+            Node quoted = readExpr(); // get the expression that is quoted
+
+            if (quoted == null) {
+                throw new RuntimeException("Syntax Error: Unexpected EOF");
+            }
+
+            Node quote = new Node(); // Transform into a quote() statement (for simplicity)
+            quote.val = "quote";
+
+            Node rest = new Node();
+            rest.car = quoted;
+
+            rest.cdr = nil();
+            Node pair = new Node();
+
+            pair.car = quote; // FIXME: might be worth, if I have time, finding a more efficient way to complete this instead of using a built quote() statement.
+            pair.cdr = rest;  // FIXME: this current solution will produce bugs for '''a and similar cases. 
+            return pair;      // I don't know how to practically fix this.
         }
 
         Node atom = new Node();

@@ -16,6 +16,7 @@ public class fileChecker {
     public static void main(String[] args) throws IOException {
         // Put number here:
         Integer testNumber = 2;  // FIXME: EDIT HERE
+                                // BEFORE RUNNING THIS FILE, RUN java Main < test/test(x).txt > testOutput/testOutput(x).txt
     
         String fOneName = "testOutput/testOutput" + testNumber.toString() + ".txt";
         String fTwoName = "testResults/testResults" + testNumber.toString() + ".txt";
