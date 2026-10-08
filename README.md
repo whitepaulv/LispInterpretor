@@ -1,8 +1,8 @@
 Lisp Interpretor:
 
-Vince White
-University of Alabama
-CS 403: Programming Languages
+Vince White, 
+University of Alabama, 
+CS 403: Programming Languages, 
 Donald Yessick
 
 
@@ -10,6 +10,11 @@ This is my implementation of the lisp interpreter project I completed for CS403.
 The code has many comments explaining, and likely over-explaining, my thought process at points.
 Some of the comments are notes to myself from when I fixed bugs, while others were comments
 I put as I was understanding the process of designing lisp. 
+
+Test cases are stored in test/, while test case output is stored in testOutput/. Random lines
+are present in these files, which serve only to help me look at the results in chunks instead of
+searching a long file for the exact test case I am looking for. The lines vaguely group the
+test cases on what they are testing for.
 
 
 Use of AI: 
