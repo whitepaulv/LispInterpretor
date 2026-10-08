@@ -240,8 +240,8 @@ public class Main {
                     num2 = evalAtom(n.cdr.cdr.car);
                     if (num2 == null || num2.isNil || Double.parseDouble(num2.val.trim()) == 0) return nil(); // Will this have rounding error?
 
-                    Double doubleOne = Double.parseDouble(num1.val.trim());
-                    Double doubleTwo = Double.parseDouble(num2.val.trim());
+                    Integer doubleOne = Integer.parseInt(num1.val.trim());
+                    Integer doubleTwo = Integer.parseInt(num2.val.trim());
                     Node ret = new Node();
                     ret.val = String.valueOf(doubleOne / doubleTwo);
 
