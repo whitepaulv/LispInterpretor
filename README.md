@@ -1,9 +1,9 @@
-**Lisp Interpretor:
+Lisp Interpretor:
 
 Vince White
 University of Alabama
 CS 403: Programming Languages
-Donald Yessick**
+Donald Yessick
 
 
 This is my implementation of the lisp interpreter project I completed for CS403. 
@@ -12,12 +12,12 @@ Some of the comments are notes to myself from when I fixed bugs, while others we
 I put as I was understanding the process of designing lisp. 
 
 
-**Use of AI: **
+Use of AI: 
 AI was used to generate test cases for each stage of the project. It was also
 intended to be used to confirm the test cases, but it was too unreliable and I instead
 manually checked test cases. AI was also used at points to assist with finding bugs.
 
-**How to run:**
+How to run:
 if you wish to run the program with your own input:
 javac Main.java
 Java Main
