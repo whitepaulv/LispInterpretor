@@ -1,0 +1,52 @@
+(function (x) x)
+(function () 'hello)
+-----------------------------------------
+(set square (function (n) (mul n n)))
+(square 8)
+(set id (function (x) x))
+id
+(id 5)
+(id 'z)
+(id (car '(a b)))
+-----------------------------------------
+(set first (function (a b) a))
+(set second (function (a b) b))
+(first 2 3)
+(second 2 3)
+-----------------------------------------
+(set mid (function (a b c) b))
+(set third (function (a b c) c))
+(mid 2 3 'x)
+(third 2 3 'x)
+-----------------------------------------
+(set x 1)
+(set shadow (function (x) x))
+(shadow 9)
+x
+-----------------------------------------
+(set only (function (z) z))
+(only 3)
+z
+-----------------------------------------
+(set g 10)
+(set see (function (n) g))
+(see 3)
+(see 4)
+(see 5)
+(see 6)
+-----------------------------------------
+(set inner (function (y) y))
+(set outer (function (x) (inner x)))
+(outer 6)
+-----------------------------------------
+(set pair (function (x) (cons (inner 1) (cons x ()))))
+(pair 2)
+-----------------------------------------
+(set apply1 (function (f x) (f x)))
+(apply1 id 9)
+-----------------------------------------
+(set hi (function () 'hello))
+(hi)
+-----------------------------------------
+(set konst (function (x) 'x))
+(konst 4)
